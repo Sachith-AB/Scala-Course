@@ -1,3 +1,5 @@
+import scala.io.StdIn.readLine
+
 object Fibonacci {
 
   // Function to recursively compute Fibonacci sequence and print first n numbers
@@ -19,7 +21,8 @@ object Fibonacci {
   }
 
   def main(args: Array[String]): Unit = {
-    val n = 10 // Change n to the desired number of Fibonacci numbers
+    println("Enter value:");
+    val n = scala.io.StdIn.readInt() // Change n to the desired number of Fibonacci numbers
     printFibonacci(n)
   }
 }

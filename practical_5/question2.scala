@@ -8,9 +8,9 @@ object LibraryManagement {
 
   // Initial set of books in the library
   var libraryBooks: Set[Book] = Set(
-    Book("Madol Doowa", "Martin Wickramasinghe", "978-0981531687"),
-    Book("Thunman Handiya", "Mahagamasekara", "978-0132350884"),
-    Book("Hathpana", "Kumarathunga Munidasa", "978-0201633610")
+    Book("Madol Doowa", "Martin Wickramasinghe", "1000"),
+    Book("Thunman Handiya", "Mahagamasekara", "1234"),
+    Book("Hathpana", "Kumarathunga Munidasa", "8940")
   )
 
   // Function to add a new book to the library
@@ -71,18 +71,18 @@ object LibraryManagement {
     displayLibraryCollection()
 
     println("\nAdding a new book...")
-    val newBook = Book("Introduction to Algorithms", "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein", "978-0262033848")
+    val newBook = Book("Magul Kama", "Kumarathunga Munidasa", "87896")
     addBook(newBook)
     displayLibraryCollection()
 
     println("\nSearching for a book by title...")
-    searchByTitle("Scala Programming")
+    searchByTitle("Madol Doowa")
 
     println("\nDisplaying books by a specific author...")
-    displayBooksByAuthor("Robert C. Martin")
+    displayBooksByAuthor("Kumarathunga Munidasa")
 
     println("\nRemoving a book by ISBN...")
-    removeBook("978-0201633610")
+    removeBook("87896")
     displayLibraryCollection()
   }
 }
