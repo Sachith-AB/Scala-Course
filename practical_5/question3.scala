@@ -4,7 +4,10 @@ object Fibonacci {
 
   // Function to recursively compute Fibonacci sequence and print first n numbers
   def printFibonacci(n: Int): Unit = {
-    def fibonacciRecursive(num: Int): Int = {
+    if(n>=30){
+        println("Out of range");
+      }else{
+        def fibonacciRecursive(num: Int): Int = {
       if (num <= 1) num
       else fibonacciRecursive(num - 1) + fibonacciRecursive(num - 2)
     }
@@ -18,6 +21,8 @@ object Fibonacci {
       }
       println()
     }
+      }
+    
   }
 
   def main(args: Array[String]): Unit = {

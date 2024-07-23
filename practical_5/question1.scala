@@ -6,8 +6,12 @@ object InventoryManagementSystem {
   def getProductList(): List[String] = {
     def loop(products: List[String]): List[String] = {
       val productName = readLine("Enter product name (or type 'done' to finish): ")
-      if (productName.toLowerCase == "done") products
-      else loop(products :+ productName)
+      if (productName.toLowerCase == "done"){
+         products
+      }
+      else {
+        loop(products :+ productName)
+      }
     }
     loop(Nil)
   }
