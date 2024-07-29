@@ -28,6 +28,10 @@ object MainApp {
     destination * time
   }
 
+  def volume_cylinder(height: Double,radius: Double): Double = {
+    return Math.PI*radius*radius*height
+  }
+
   // Main function to call and demonstrate the above functions
   def main(args: Array[String]): Unit = {
     // Example usage of area function
@@ -50,5 +54,10 @@ object MainApp {
     val destination = 100
     val time = 2
     println(s"The run time for destination $destination and time $time is ${runTime(destination, time)}")
+
+    val radius = 7;
+    val height = 10;
+
+    println(s"Volume of cylinder is ${volume_cylinder(height,radius)}")
   }
 }
