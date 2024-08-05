@@ -29,8 +29,21 @@ object InventorySystem extends App {
     inventory.isEmpty
   }
 
+  def updatePrice(inventory: Map[Int, Product], productId: Int , newValue: Double): Unit = {
+    inventory.get(productId) match {
+      case Some(product) =>
+        case class updateProduct(name: String, quantity: Int, price: Double)
+
+        102 -> updateProduct("Smartphone", 5, newValue);
+        println(s"Product ID: $productId, Name: ${product.name}, Quantity: ${product.quantity}, Price: ${newValue}")
+        
+      case None =>
+        println(s"Product with ID $productId does not exist in the inventory.")  
+    }
+  }
+
   // IV. Merge inventory1 and inventory2, updating quantities and retaining the highest price
-  def mergeInventories(inv1: Map[Int, Product], inv2: Map[Int, Product]): Map[Int, Product] = {
+  def mergeInventories(inv1: Map[Int, Product], inv2: Map[Int, Product]): Unit = {
     inv2.foldLeft(inv1) { case (acc, (id, product)) =>
       acc.get(id) match {
         case Some(existingProduct) =>
@@ -71,4 +84,8 @@ object InventorySystem extends App {
 
   println("\nV. Check and Print Product ID 102 Details:")
   printProductDetailsIfExists(inventory1, 102)
+
+  println("\nVI. Update and Print Product ID 102 Details:")
+  updatePrice(inventory1, 102, 200.99)
+
 }
