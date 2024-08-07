@@ -1,7 +1,7 @@
 import scala.io.StdIn.readLine;
 
 def squareNum(numbers: List[Int]):List[Int] = {
-    numbers.map(num => num * num)
+    numbers.map(num => num * num);
 }
 
 def main(args: Array[String]):Unit = {
