@@ -18,5 +18,5 @@ def main(args : Array[String]): Unit = {
     val price = 24.95;
     val quantity = 60;
 
-    println(cost(price,quantity));
+    println{cost(price,quantity)};
 }
