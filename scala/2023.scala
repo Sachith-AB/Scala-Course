@@ -8,12 +8,12 @@ def blast(n: Int): Unit = {
   }
 }
 
-def printA(n: Int, finish: Int): Unit = {
+def printA(finish: Int, n: Int): Unit = {
   if (n > finish) {
     return
   } else {
     println("a = " + n)
-    printA(n + 1, finish = finish)
+    printA(n + 1, finish)
   }
 }
 
@@ -67,6 +67,13 @@ def isEven(n: Int): Boolean = n match {
 }
 def isOdd(n: Int): Boolean = !isEven(n)
 
+val evenOrOdd = (a: Int) =>
+  a % 2 match {
+    case 0 => "Even"
+    case _ => "Odd"
+  }
+
+val event = (n: Int) => if (n % 2 == 0) true else false
 def main(args: Array[String]): Unit = {
-  println(isEven(4))
+  printA(10, 1)
 }
