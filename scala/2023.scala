@@ -25,7 +25,7 @@ def GCD(a: Int, b: Int): Int = b match {
 }
 
 def power(value: Int, po: Int): Int = po match {
-  case 0 => 0
+
   case 1 => value
   case _ => value * power(value, po - 1)
 }
@@ -74,6 +74,7 @@ val evenOrOdd = (a: Int) =>
   }
 
 val event = (n: Int) => if (n % 2 == 0) true else false
+
 def main(args: Array[String]): Unit = {
-  printA(10, 1)
+  print(triangle(4))
 }
